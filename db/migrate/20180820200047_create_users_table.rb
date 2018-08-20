@@ -6,6 +6,7 @@ class CreateUsersTable < ActiveRecord::Migration[5.2]
 	    t.string :password
 	    t.datetime :created_at
 	    t.datetime :updated_at
+	    t.date :birthday
     end
     add_index :users, :email, unique: true
   end
