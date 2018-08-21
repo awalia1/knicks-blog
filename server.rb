@@ -33,6 +33,17 @@ get '/forum' do
     erb :forum
 end
 
+post '/forum' do
+	user = session[:user]
+	post = Post.new(
+		title: params['title'],
+		author: user['first_name'],
+		content: params['content']
+	)
+	post.save
+	$post= Post.all
+end
+
 get '/signup' do
     erb :signup
 end
@@ -43,7 +54,7 @@ post '/signup' do
     	first_name: params['firstName'],
         last_name: params['lastName'],
         email: params['email'],
-        birthday: params['birthday']
+        birthday: params['birthday'],
         password: params['password']
     )
 

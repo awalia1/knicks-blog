@@ -10,3 +10,7 @@ body {
 	width: 30%;
 	margin: auto;
 }
+
+#teamName {
+	display: none;
+}

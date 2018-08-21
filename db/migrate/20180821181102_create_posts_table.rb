@@ -1,0 +1,12 @@
+class CreatePostsTable < ActiveRecord::Migration[5.2]
+  def change
+  		create_table :users do |t|
+	    t.string :title
+	    t.string :author
+	    t.string :content
+	    t.datetime :created_at
+	    t.datetime :updated_at
+	    t.reference :user, foreign_key: true
+    end
+  end
+end
