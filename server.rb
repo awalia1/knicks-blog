@@ -1,11 +1,11 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'active_record'
 # require 'securerandom'
 enable :sessions
 
-require 'active_record'
-ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
-# set :database, "sqlite3:knicks-blog.sqlite3"
+# ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+set :database, "sqlite3:knicks-blog.sqlite3"
 
 get '/' do 
 	erb :home
@@ -40,8 +40,10 @@ end
 post '/signup' do
     p params
     user = User.new(
+    	first_name: params['firstName'],
+        last_name: params['lastName'],
         email: params['email'],
-        name: params['fullname'],
+        birthday: params['birthday']
         password: params['password']
     )
 
