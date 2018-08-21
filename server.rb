@@ -22,11 +22,15 @@ post '/' do
     user = User.find_by(email: email)
     if user.password == given_password
         session[:user] = user
-        redirect :forum
+        redirect :account
     else
         p 'Invalid credentials'
         redirect '/'
     end
+end
+
+get '/account' do
+    erb :account
 end
 
 get '/forum' do
@@ -41,7 +45,8 @@ post '/forum' do
 		content: params['content']
 	)
 	post.save
-	$post= Post.all
+	$posts = Post.all
+	redirect '/forum'
 end
 
 get '/signup' do

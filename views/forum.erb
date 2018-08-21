@@ -1,13 +1,8 @@
-	<% if session[:user] == nil %>
-		<p> No one is logged in. </p>
-	<% elsif session[:user] != nil %>
-		<p> Welcome back, <%= session[:user].name %> </p>
-		<form action="/forum" method="POST">
-  			Title: <input type="text" name="title">
-  			<input type="submit">
-			<br>
-			<textarea rows="7" cols="50" name="content"> Enter text here...</textarea>
-		</form>
+
+	<% $posts.each do |post| %>
+   		<h1><%= post.title %></h1>
+   		<h2><%= post.author %></h2>
+   		<p><%= post.content %></p>
+   	<% end %>
 
 
-	<% end %>

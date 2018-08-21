@@ -1,0 +1,11 @@
+	<% if session[:user] == nil %>
+		<p> No one is logged in. </p>
+	<% elsif session[:user] != nil %>
+		<p> Welcome back, <%= session[:user].first_name %> </p>
+		<form action="/forum" method="POST">
+  			Title: <input type="text" name="title">
+  			<input type="submit">
+			<br>
+			<textarea rows="7" cols="50" name="content"> Enter text here...</textarea>
+		</form>
+	<% end %>
