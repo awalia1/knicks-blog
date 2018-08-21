@@ -74,4 +74,16 @@ get '/logout' do
     redirect '/'
 end
 
+get '/logout' do
+  # do log out function here
+  session[:user] = nil
+  session.clear
+  p "user has logged out"
+  redirect '/'
+end
+
+get '/delete' do 
+	erb :delete
+end
+
 require './models'

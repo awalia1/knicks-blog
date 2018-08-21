@@ -7,10 +7,30 @@ body {
 
 .forms {
 	background-color: white;
-	width: 30%;
+	width: 20%;
 	margin: auto;
+	margin-top: 10%;
+	padding: 4%;
+}
+
+label {
+	font-size: 20px;
+}
+
+.labels {
+	margin-top: 20px;
+}
+
+.chant {
+	margin-top: 10px;
+	font-size: 50px;
 }
 
 #teamName {
 	display: none;
+}
+
+.bottom-text {
+	font-size: 16px;
+	margin-top: 50px;
 }
