@@ -42,7 +42,8 @@ post '/forum' do
 	post = Post.new(
 		title: params['title'],
 		author: user['first_name'],
-		content: params['content']
+		content: params['content'],
+		user_id: user['id']
 	)
 	post.save
 	$posts = Post.all
