@@ -82,8 +82,32 @@ get '/logout' do
   redirect '/'
 end
 
-get '/delete' do 
-	erb :delete
+get '/confirm' do 
+	erb :confirm
+end
+
+# get '/delete' do
+# 	current = session[:user].id
+# 	p current +'has been deleted'
+#   # 
+#   # 	user = User.find_by(id: current)
+#   # 	postD = Post.where(foreign_key: current)
+#   # 		postD.each do |post|
+#   #   		post.destroy
+# 		# end
+#   # 	user.destroy
+#  	# redirect '/'
+# end
+
+get '/delete' do
+  current = session[:user].id
+  user = User.find_by(id: current)
+  postD = Post.where(user_id: current)
+  postD.each do |post|
+    post.destroy
+  end
+  user.destroy
+  redirect '/'
 end
 
 require './models'
