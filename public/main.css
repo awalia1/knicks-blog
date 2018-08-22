@@ -80,8 +80,7 @@ body {
 }
 .account-grid {
 	display: grid;
-	grid-template-columns: 35% 65%;
-	grid-gap: 40px;
+	grid-template-columns: 33.33% 33.33% 33.33%;
 }
 
 .profile-picture {
@@ -90,7 +89,7 @@ body {
 }
 
 .profile-container {
-	max-width: 90%;
+	max-width: 95%;
 	margin: auto;
 }
 
@@ -111,7 +110,7 @@ body {
 
 .post-form {
 	background: blue;
-	width: 65%;
+
 	padding: 2%;
 }
 
@@ -120,6 +119,7 @@ body {
 }
 
 .post-form input {
+	font-size: 20px;
 	width: 80%;
 	padding: 2% 5%;
 }
@@ -213,4 +213,16 @@ textarea {
 
 a:hover {
 	border: 2px solid white;
+}
+
+.most-recent {
+	background-color: orange;
+}
+
+.most-recent .post-title {
+	color: black;
+}
+
+.most-recent .posts {
+	border: 2px solid blue;
 }

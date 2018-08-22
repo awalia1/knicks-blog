@@ -14,11 +14,24 @@
 				<div class="post-form">
 					<h1>Watch the game last night? Talk about it!</h1>
 					<form action="/forum" method="POST">
-			  			<div class="title">Title:<br> <input type="text" name="title"></div>
+			  			<div class="title"><br> <input type="text" placeholder= "Post Title" name="title"></div>
 						<br>
 						<textarea rows="10" cols="50" name="content">Type here... </textarea><br>
 						<div class="submit"><input type="submit"></div>
 					</form>
+				</div>
+				<div class="most-recent">
+					<h1 class="forum-headline">Most Recent Activity</h1>
+					<div class="post-container">
+						<% $posts.reverse.first(5).each do |post| %>
+							<div class="posts">
+						   		<h1 class="post-title"><b><%= post.title %></b></h1>
+						   		<p class="post-time"><%= post.created_at %></p>
+						   		<h2 class="post-author"><em>By: <%= post.author %></em></h2>
+						   		<p class="post-content"><%= post.content %></p>
+					   		</div>
+	   					<% end %>
+  			 		</div>
 				</div>
 			</div>
 		</div>
