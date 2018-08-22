@@ -34,11 +34,12 @@ post '/' do
 end
 
 get '/account' do
+	$posts = Post.all
     erb :account
 end
 
 get '/forums' do
-	$posts = Post.all
+	posts = Post.all
     erb :forums
 end
 
