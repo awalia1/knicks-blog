@@ -245,3 +245,13 @@ a:hover {
 .search-bar input {
 	font-size: 25px;
 }
+
+.go-to-forums {
+	margin-top: 15%;
+	text-align: center;
+	font-size: 40px;
+}
+
+.go-to-forums a {
+	text-decoration: none;
+}
