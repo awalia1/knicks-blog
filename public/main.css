@@ -1,40 +1,81 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url("http://wallpaperbasketball.com/wp-content/uploads/2018/08/New-York-Knicks-Desktop-Wallpapers.jpg");
-	text-align: center;
+	background-image: url("https://i.pinimg.com/236x/de/ce/5a/dece5a71dccd94a4e8d75d31fb91de73--new-york-knicks-nba-new-york.jpg");
+	font-family: 'Ubuntu', sans-serif;
 }
 
-.forms {
-	background-color: white;
-	width: 20%;
+
+.login {
+	background-color: rgba(255, 255, 255, 0.9);
+	width: 25%;
 	margin: auto;
-	margin-top: 10%;
-	padding: 4%;
+	margin-top: 8%;
+	padding: 2%;
 }
 
-label {
+.login h1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+.login input {
+	width: 100%;
+	padding: 1%;
+	margin-bottom: 4%;
 	font-size: 20px;
 }
 
-.labels {
-	margin-top: 20px;
+.login-labels {
+	margin: auto;
+	font-size: 30px;
+}
+
+.login-bottom-text {
+	font-size: 25px;
+	text-align: center
 }
 
 .chant {
-	margin-top: 10px;
-	font-size: 50px;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 180px;
+	color: white;
+	color: orange;
+	text-shadow: 2px 2px 4px blue;
 }
 
 #teamName {
 	display: none;
 }
 
-.bottom-text {
-	font-size: 16px;
-	margin-top: 50px;
+.signup {
+	background-color: rgba(255, 255, 255, 0.9);
+	width: 25%;
+	margin: auto;
+	margin-top: 1%;
+	padding: 1%;
 }
 
-a {
-	color: white;
+.signup h1 {
+	text-align: center;
+	font-size: 35px;
 }
+
+.signup input {
+	width: 100%;
+	padding: 1%;
+	margin-bottom: 3%;
+	font-size: 18px;
+}
+
+.signup-labels {
+	margin: auto;
+	font-size: 25px;
+}
+
+.signup-bottom-text {
+	font-size: 20px;
+	text-align: center
+}
+
