@@ -1,14 +1,26 @@
 	<% if session[:user] == nil %>
 		<p> No one is logged in. </p>
 	<% elsif session[:user] != nil %>
-		<p> Welcome back, <%= session[:user].first_name %> </p>
-		<form action="/forum" method="POST">
-  			Title: <input type="text" name="title">
-  			<input type="submit">
-			<br>
-			<textarea rows="7" cols="50" name="content"> Enter text here...</textarea>
-		</form>
+		<div class="profile-container">
+			<div class="account-grid">
+				<div class="profile">
+					<h1 class="welcome-message"> Hey, <%= session[:user].first_name %> </h1>
+					<img class="profile-picture" src="https://i.kinja-img.com/gawker-media/image/upload/s--gS36U-zg--/c_scale,f_auto,fl_progressive,q_80,w_800/ulvv23iqcsbldcp5qtxa.jpg">
+					<!-- <div class="profile-links"> -->
+						<div class="delete-profile-btn"><a href="/confirm">Delete acccount</a></div><br>
+						<div class="log-out-btn"><a href="/logout">Log out</a></div>
+					<!-- </div> -->
+				</div>
+				<div class="post-form">
+					<h1>Watch the game last night? Talk about it!</h1>
+					<form action="/forum" method="POST">
+			  			<div class="title">Title:<br> <input type="text" name="title"></div>
+						<br>
+						<textarea rows="10" cols="50" name="content">Type here... </textarea><br>
+						<div class="submit"><input type="submit"></div>
+					</form>
+				</div>
+			</div>
+		</div>
 
-		<a href="/confirm">Delete acccount</a>
-		<a href="/logout">Log out</a>
 	<% end %>

@@ -78,4 +78,139 @@ body {
 	font-size: 20px;
 	text-align: center
 }
+.account-grid {
+	display: grid;
+	grid-template-columns: 35% 65%;
+	grid-gap: 40px;
+}
 
+.profile-picture {
+	max-width: 90%;
+	margin-left: 5%; 
+}
+
+.profile-container {
+	max-width: 90%;
+	margin: auto;
+}
+
+.account-grid h1 {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
+
+.account-grid input {
+	margin:auto;
+}
+
+.profile {
+	background: orange;	
+	padding-bottom: 100%;
+}
+
+.post-form {
+	background: blue;
+	width: 65%;
+	padding: 2%;
+}
+
+.post-form form {
+	margin-left: 5%;
+}
+
+.post-form input {
+	width: 80%;
+	padding: 2% 5%;
+}
+
+.profile a {
+	background-color: blue;
+	color: white;
+	bottom: 10px;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 3%;
+}
+
+.delete-profile-btn {
+	margin-top: 7%;
+	margin-bottom: 5%;
+	margin-left: 30%;
+}
+
+.log-out-btn {
+	margin-left: 39%;
+}
+
+.title {
+	font-size: 40px;
+}
+
+textarea {
+	width: 90%;
+	margin-bottom: 5%;
+}
+
+.submit {
+	margin-left: 7%;
+}
+
+.post-container { 
+	width: 70%;
+	margin: auto;
+}
+
+.posts {
+	text-align: center;
+	margin-top: 2%;
+	background-color: rgba(255, 255, 255); 
+	padding: 1%;
+	border-radius: 10%;
+}
+
+.forum-headline {
+	font-size: 80px;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 4px orange;
+}
+
+.posts:nth-child(odd) {
+	border: 3px solid orange;
+}
+
+.posts:nth-child(even) {
+    border: 3px solid blue;
+}
+
+.confirm-headline {
+	font-size: 80px;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 4px blue;
+}
+
+.delete-confirm-btn {
+	background-color: red;
+}
+
+.cancel-btn {
+	background-color: green;
+}
+
+.confirm-links {
+	margin-top: 10%;
+}
+
+.confirm-links a {
+	text-decoration: none;
+	color: white;
+	font-size: 60px;
+	padding: 1.5%;
+	margin-left: 25%;
+}
+
+a:hover {
+	border: 2px solid white;
+}

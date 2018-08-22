@@ -20,13 +20,17 @@ post '/' do
     # if they match, log in the user
 
     user = User.find_by(email: email)
-    if user.password == given_password
-        session[:user] = user
-        redirect :account
+    if user == nil
+    	redirect '/'
     else
-        p 'Invalid credentials'
-        redirect '/'
-    end
+    	if user.password == given_password
+        	session[:user] = user
+        	redirect :account
+    	else
+        	p 'Invalid credentials'
+        	redirect '/'
+    	end
+	end
 end
 
 get '/account' do
@@ -34,6 +38,7 @@ get '/account' do
 end
 
 get '/forum' do
+	$posts = Post.all
     erb :forum
 end
 
@@ -46,7 +51,6 @@ post '/forum' do
 		user_id: user['id']
 	)
 	post.save
-	$posts = Post.all
 	redirect '/forum'
 end
 
@@ -86,24 +90,11 @@ get '/confirm' do
 	erb :confirm
 end
 
-# get '/delete' do
-# 	current = session[:user].id
-# 	p current +'has been deleted'
-#   # 
-#   # 	user = User.find_by(id: current)
-#   # 	postD = Post.where(foreign_key: current)
-#   # 		postD.each do |post|
-#   #   		post.destroy
-# 		# end
-#   # 	user.destroy
-#  	# redirect '/'
-# end
-
 get '/delete' do
   current = session[:user].id
   user = User.find_by(id: current)
-  postD = Post.where(user_id: current)
-  postD.each do |post|
+  posted = Post.where(user_id: current)
+  posted.each do |post|
     post.destroy
   end
   user.destroy
