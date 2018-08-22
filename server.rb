@@ -37,12 +37,12 @@ get '/account' do
     erb :account
 end
 
-get '/forum' do
+get '/forums' do
 	$posts = Post.all
-    erb :forum
+    erb :forums
 end
 
-post '/forum' do
+post '/forums' do
 	user = session[:user]
 	post = Post.new(
 		title: params['title'],
@@ -51,7 +51,7 @@ post '/forum' do
 		user_id: user['id']
 	)
 	post.save
-	redirect '/forum'
+	redirect '/forums'
 end
 
 get '/signup' do
