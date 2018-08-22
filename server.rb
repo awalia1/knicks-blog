@@ -73,6 +73,10 @@ post '/signup' do
     redirect '/'
 end
 
+get '/search' do 
+	erb :search
+end
+
 get '/logout' do
     session[:user] = nil 
     p "user has logged out"

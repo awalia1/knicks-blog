@@ -9,7 +9,14 @@
 					<img class="profile-picture" src="https://i.kinja-img.com/gawker-media/image/upload/s--gS36U-zg--/c_scale,f_auto,fl_progressive,q_80,w_800/ulvv23iqcsbldcp5qtxa.jpg">
 					<!-- <div class="profile-links"> -->
 						<div class="delete-profile-btn"><a href="/confirm">Delete acccount</a></div><br>
-						<div class="log-out-btn"><a href="/logout">Log out</a></div>
+						<div class="log-out-btn"><a href="/logout">Log out</a></div><br>
+						<div class="search-bar">
+							<h2>Search for posts</h2>
+							<form action="/search" method="POST">
+								<input type="text" name="search" placeholder="user email">
+								<input type="submit">
+							</form>
+						</div>
 					<!-- </div> -->
 				</div>
 				<div class="most-recent">

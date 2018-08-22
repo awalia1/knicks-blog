@@ -235,3 +235,13 @@ a:hover {
 	text-decoration: none;
 	color: orange;
 }
+
+.search-bar {
+	margin-top: 8%;
+	text-align: center;
+	font-size: 25px;
+}
+
+.search-bar input {
+	font-size: 25px;
+}
