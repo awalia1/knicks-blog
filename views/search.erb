@@ -1,6 +1,6 @@
 <h1 class="forum-headline">Posts</h1>
 	<div class="post-container">
-		<% $posts.reverse.each do |post| %>
+		<% $user.posts.reverse.each do |post| %>
 			<div class="posts">
 		   		<h1 class="post-title"><b><%= post.title %></b></h1>
 		   		<p class="post-time"><%= post.created_at %></p>

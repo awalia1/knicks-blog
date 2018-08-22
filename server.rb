@@ -74,6 +74,11 @@ post '/signup' do
 end
 
 get '/search' do 
+	$user = User.find_by(email:params[:search])
+	# p '====='
+	# p user.posts
+	# p '====='
+	# posts = Post.where(user_id: user)
 	erb :search
 end
 
