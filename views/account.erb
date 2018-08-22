@@ -1,5 +1,6 @@
 	<% if session[:user] == nil %>
-		<p> No one is logged in. </p>
+		<p class="not-logged-in"> No one is logged in. </p>
+		<p class="not-logged-in">Click <a href='/'> here to log in</a></p>
 	<% elsif session[:user] != nil %>
 		<div class="profile-container">
 			<div class="account-grid">

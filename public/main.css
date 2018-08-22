@@ -109,8 +109,7 @@ body {
 }
 
 .post-form {
-	background: blue;
-
+	background: orange;
 	padding: 2%;
 }
 
@@ -216,7 +215,7 @@ a:hover {
 }
 
 .most-recent {
-	background-color: orange;
+	background-color: blue;
 }
 
 .most-recent .post-title {
@@ -224,5 +223,15 @@ a:hover {
 }
 
 .most-recent .posts {
-	border: 2px solid blue;
+	border: 2px solid orange;
+}
+
+.not-logged-in {
+	text-align: center;
+	font-size: 60px;
+}
+
+.not-logged-in a {
+	text-decoration: none;
+	color: orange;
 }
