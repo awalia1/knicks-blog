@@ -4,8 +4,8 @@ require 'active_record'
 # require 'securerandom'
 enable :sessions
 
-# ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
-set :database, "sqlite3:knicks-blog.sqlite3"
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+# set :database, "sqlite3:knicks-blog.sqlite3"
 
 get '/' do 
 	erb :home
