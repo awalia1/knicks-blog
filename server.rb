@@ -23,12 +23,12 @@ post '/' do
     if user == nil
     	redirect '/'
     else
-    	if user.password == given_password
-        	session[:user] = user
-        	redirect :account
+      if user.password == given_password
+        session[:user] = user
+        redirect :account
     	else
-        	p 'Invalid credentials'
-        	redirect '/'
+        p 'Invalid credentials'
+        redirect '/'
     	end
 	end
 end
